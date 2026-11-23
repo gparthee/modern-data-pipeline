@@ -1,0 +1,12 @@
+name: portfolio_pipeline
+version: '1.0.0'
+config-version: 2
+profile: portfolio_pipeline
+model-paths: ["models"]
+seed-paths: ["seeds"]
+models:
+  portfolio_pipeline:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
